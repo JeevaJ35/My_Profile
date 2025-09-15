@@ -20,52 +20,51 @@ const Hero = () => {
       <Reveal>
         <motion.div
           style={{ y: picY }}
-          className="relative w-44 h-44 rounded-full p-1 z-10"
-          whileHover={{ scale: 1.3 }}
+          className="relative w-44 h-44 z-10"
+          whileHover={{ scale: 1.15 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <motion.div
-            className="absolute -inset-1 rounded-full bg-gradient-to-tr from-pink-500 via-yellow-500 to-purple-500 animate-spin-slow"
-            style={{ zIndex: -1 }}
-          />
+          {/* Rotating gradient border */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-500 via-yellow-500 to-purple-500 animate-spin-slow p-[3px]" />
+
+          {/* Image */}
           <img
-            src="/profile.jpg" // or profile.image if you add it
+            src="/profile.jpg" // or profile.image
             alt={profile.name}
-            className="w-full h-full rounded-full object-cover border-4 border-white dark:border-background shadow-soft relative"
+            className="relative w-full h-full rounded-full object-cover border-4 border-white dark:border-gray-900 shadow-lg"
           />
         </motion.div>
       </Reveal>
 
       {/* Name */}
       <Reveal delay={0.2}>
-        <h1 className="mt-6 text-3xl font-bold dark:text-foreground text-gray-900 z-10 relative">
+        <h1 className="mt-6 text-3xl font-bold dark:text-white text-gray-900 z-10 relative">
           {profile.name}
         </h1>
       </Reveal>
 
       {/* Title */}
       <Reveal delay={0.4}>
-        <p className="mt-2 text-lg text-gray-600 dark:text-muted z-10 relative">
+        <p className="mt-2 text-lg text-gray-600 dark:text-gray-400 z-10 relative">
           {profile.title}
         </p>
       </Reveal>
 
-      {/* Highlights as badges */}
-<Reveal delay={0.6}>
-  <div className="mt-4 flex flex-wrap justify-center gap-2 z-10 relative max-w-2xl">
-    {profile.highlights.map((point, idx) => (
-      <span
-        key={idx}
-        className="px-3 py-1 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-800 dark:text-purple-200 text-sm shadow-sm"
-      >
-        {point}
-      </span>
-    ))}
-  </div>
-</Reveal>
+      {/* Highlights */}
+      <Reveal delay={0.6}>
+        <div className="mt-4 flex flex-wrap justify-center gap-2 z-10 relative max-w-2xl">
+          {profile.highlights.map((point, idx) => (
+            <span
+              key={idx}
+              className="px-3 py-1 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-800 dark:text-purple-200 text-sm shadow-sm"
+            >
+              {point}
+            </span>
+          ))}
+        </div>
+      </Reveal>
 
-
-      {/* Links as Buttons */}
+      {/* Links */}
       <Reveal delay={0.8}>
         <div className="flex gap-4 mt-6 z-10 relative">
           {profile.links.map((link, idx) => (
