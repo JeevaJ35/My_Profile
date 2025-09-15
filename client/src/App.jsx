@@ -9,10 +9,8 @@ import Footer from "./components/Footer.jsx";
 import AIWidget from "./components/AIWidget.jsx";
 
 const App = () => {
-  // Theme state
   const [theme, setTheme] = useState("light");
 
-  // Respect prefers-color-scheme and remember toggle
   useEffect(() => {
     const saved = localStorage.getItem("theme");
     if (saved) {
@@ -33,16 +31,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
-      <header className="p-4 flex justify-between">
-        <h1 className="text-xl font-bold">My Portfolio</h1>
-        <button
-          onClick={toggleTheme}
-          className="px-4 py-2 rounded bg-gray-200 dark:bg-gray-700"
-        >
-          {theme === "light" ? "Dark Mode" : "Light Mode"}
-        </button>
-      </header>
-
+      {/* ✅ Only keep Navbar for header */}
       <Navbar />
 
       <main className="container">
