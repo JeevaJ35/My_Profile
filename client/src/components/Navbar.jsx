@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-40 backdrop-blur bg-background/60 border-b border-white/5">
       <nav className="container flex items-center justify-between h-16">
-        <a href="#" className="font-semibold tracking-wide">Jeeva.dev</a>
+        <a href="#" className="font-semibold tracking-wide">Jeevanandham</a>
         <ul className="hidden md:flex gap-6 text-sm">
           {items.map(i => (
             <li key={i.href}><a className="hover:text-accent" href={i.href}>{i.label}</a></li>
