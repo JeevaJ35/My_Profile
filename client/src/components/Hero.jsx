@@ -30,7 +30,7 @@ const Hero = () => {
           {/* Image wrapper with clipping */}
           <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-900 shadow-lg">
             <img
-              src="/profile.jpg" // or profile.image
+              src="https://media.licdn.com/dms/image/v2/D5603AQHGR3LW6XJhWg/profile-displayphoto-scale_400_400/B56ZlJV7Y6KMAg-/0/1757872110442?e=1761177600&v=beta&t=ytOsdjIaxm1jDlhVYn9yNYK0ca1CdXo1de1y8dd6V64" // or profile.image
               alt={profile.name}
               className="w-full h-full object-cover"
             />
