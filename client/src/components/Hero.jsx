@@ -27,7 +27,7 @@ const Hero = () => {
           {/* Rotating gradient border */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-500 via-yellow-500 to-purple-500 animate-spin-slow p-[3px]" />
 
-          {/* Image inside clipped wrapper */}
+          {/* Image wrapper with clipping */}
           <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-900 shadow-lg">
             <img
               src="/profile.jpg" // or profile.image
