@@ -27,12 +27,14 @@ const Hero = () => {
           {/* Rotating gradient border */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-500 via-yellow-500 to-purple-500 animate-spin-slow p-[3px]" />
 
-          {/* Image */}
-          <img
-            src="/profile.jpg" // or profile.image
-            alt={profile.name}
-            className="relative w-full h-full rounded-full object-cover border-4 border-white dark:border-gray-900 shadow-lg"
-          />
+          {/* Image inside clipped wrapper */}
+          <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-900 shadow-lg">
+            <img
+              src="/profile.jpg" // or profile.image
+              alt={profile.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </motion.div>
       </Reveal>
 
